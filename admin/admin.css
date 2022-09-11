@@ -1,0 +1,80 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-image: -webkit-linear-gradient(136deg, rgb(149, 153, 226) 0%, rgb(139, 198, 236) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 50px;
+}
+
+div {
+    overflow-x: scroll;
+}
+
+table {
+    width: 100%;
+}
+
+th:nth-child(2) {
+    width: 5%;
+}
+
+th {
+    width: 10%;
+    color: #4835d4;
+    cursor: pointer;
+    user-select: none;
+    background: #fff;
+    padding: 10px 10px;
+}
+
+td {
+    font-size: 13px !important;
+    border-left: 3px solid #fff;
+    text-align: center;
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    cursor: pointer;
+    transition: .2s;
+    background: #4835d4;
+    user-select: none;
+    padding: 5px 10px;
+}
+td:nth-child(4) {
+    word-break: break-all;
+}
+
+td:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000000;
+    transition: .2s;
+}
+
+tr td:nth-child(1) {
+    border-left: 3px solid #fff;
+}
+
+tr td:nth-child(10) {
+    border-right: 3px solid #fff;
+}
+
+tr td:nth-child(11) {
+    border-bottom: none;
+    border-left: none;
+}
+
+.fa-solid {
+    font-size: 20px;
+    padding: 5px;
+}

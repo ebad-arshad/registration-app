@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="col_1">
+            <h2>General Information</h3>
+                <input dirname="0" onfocus="changing_background_col1()" onblur="changing_back_background_col1()"
+                    placeholder="First Name" class="input_for_gi check" type="text" id="f_name">
+                <input dirname="1" onfocus="changing_background_col1()" onblur="changing_back_background_col1()"
+                    placeholder="Last Name" class="input_for_gi check" type="text" id="l_name">
+                <input dirname="2" onfocus="changing_background_col1()" onblur="changing_back_background_col1()"
+                    class="input_for_gi d_o_b check" type="date" id="date_of_birth">
+                <select onchange="changing_background_col1_select()" class="input_for_gi select_gender select"
+                    name="gender" id="gender">
+                    <option value="default" selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                </select>
+                <div class="upload_image_div">
+                    <label id="label_for_file_upload" for="upload_file"> Upload Image. <input accept="image/*"
+                            onchange="loading_picture()" id="upload_file" type="file" /></label>
+                    <div class="image"></div>
+                </div>
+        </div>
+        <div class="col_2">
+            <h2>Contact Details</h2>
+            <input dirname="3" onfocus="changing_background_col2()" onblur="changing_back_background_col2()" placeholder="Email"
+                class="check" type="text" id="email">
+            <textarea dirname="4" onfocus="changing_background_col2()" onblur="changing_back_background_col2()" placeholder="Address" class="check" name="address"
+                id="address"></textarea>
+            <select onchange="changing_background_col2_select()" class="input_for_cd select_city select" name="city"
+                id="city">
+                <option value="default" selected>Select City</option>
+                <option value="karachi">Karachi</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="lahore">Lahore</option>
+                <option value="multan">Multan</option>
+                <option value="peshawar">Peshawar</option>
+                <option value="sukkur">Sukkur</option>
+                <option value="larkana">Larkana</option>
+                <option value="quetta">Quetta</option>
+            </select>
+            <input dirname="5" onfocus="changing_background_col2()" onblur="changing_back_background_col2()" placeholder="03xxxxxxxxx" class="check" type="number"
+                id="phone_number">
+            <input dirname="6" onfocus="changing_background_col2()" onblur="changing_back_background_col2()" placeholder="CNIC" class="check" type="text" id="cnic_number">
+            <button id="submit" onclick="form_check()">Submit</button>
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
+
+</html>
