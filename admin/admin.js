@@ -1,6 +1,7 @@
 let count = 1;
 let data = JSON.parse(localStorage.getItem("data"));
 window.onload = () => {
+    localStorage.removeItem("is_login")
     for (let key in data) {
         document.getElementById("table").innerHTML += `
         <tr id="${key}">
@@ -75,5 +76,34 @@ const edit_btn = () => {
             localStorage.setItem("editable_data", JSON.stringify(data[key]));
         }
     }
-    location = "../index.html"; 
+    localStorage.setItem("is_login", "yes")
+    location = "../index.html";
+}
+
+let is_login = localStorage.getItem("is_login");
+if (is_login) {
+    document.getElementsByClassName("admin_login")[0].classList.add("hidden");
+    document.getElementsByClassName("table_box")[0].classList.remove("hidden");
+} else {
+    document.getElementsByClassName("admin_login")[0].classList.remove("hidden");
+    document.getElementsByClassName("table_box")[0].classList.add("hidden");
+}
+
+const login_btn = () => {
+    let user_id = document.getElementById("user_id");
+    let user_password = document.getElementById("user_password");
+    if (user_id.value === "admin" && user_password.value === "admin12345") {
+        document.getElementsByClassName("admin_login")[0].classList.add("hidden");
+        document.getElementsByClassName("table_box")[0].classList.remove("hidden");
+    }
+    else {
+        user_id.style.borderColor = "red";
+        user_password.style.borderColor = "red";
+        document.getElementsByClassName("invalid_id_pass")[0].style.visibility = "visible";
+        setTimeout(() => {
+            document.getElementsByClassName("invalid_id_pass")[0].style.visibility = "hidden";
+            user_id.style.borderColor = "#4835d4";
+            user_password.style.borderColor = "#4835d4";
+        }, 2000);
+    }
 }

@@ -209,9 +209,3 @@ function changing_background_col2_select() {
         event.target.style.color = "rgb(211, 211, 211)"
     }
 }
-
-
-
-
-
-

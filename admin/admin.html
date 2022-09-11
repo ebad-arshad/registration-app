@@ -11,7 +11,15 @@
 </head>
 
 <body>
-    <div>
+    <div class="admin_login">
+        <h1>Admin Login</h1>
+        <input placeholder="ID" type="text" name="user_id" id="user_id">
+        <input placeholder="Password" type="password" name="user_password" id="user_password">
+        <p class="invalid_id_pass">*Invalid id or password</p>
+        <button onclick="login_btn()" class="login_btn">Login</button>
+    </div>
+
+    <div class="table_box hidden">
 
         <table id="table" cellspacing="0">
             <tr>

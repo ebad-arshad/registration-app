@@ -18,7 +18,7 @@ body {
     padding: 100px 50px;
 }
 
-div {
+.table_box {
     overflow-x: scroll;
 }
 
@@ -51,6 +51,7 @@ td {
     user-select: none;
     padding: 5px 10px;
 }
+
 td:nth-child(4) {
     word-break: break-all;
 }
@@ -77,4 +78,60 @@ tr td:nth-child(11) {
 .fa-solid {
     font-size: 20px;
     padding: 5px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.admin_login {
+    width: 40%;
+    background: #4835d4;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.admin_login input {
+    width: 60%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    color: #4835d4;
+    transition: .2s;
+}
+
+.admin_login input:focus {
+    outline: none;
+    border: 2px solid #4835d4;
+    transition: .2s;
+}
+
+.login_btn {
+    width: 60%;
+    margin-top: 50px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid #4835d4;
+    transition: .2s;
+    color: #4835d4;
+}
+
+.login_btn:active {
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .2s;
+    background: transparent;
+}
+
+.invalid_id_pass {
+    visibility: hidden;
 }
